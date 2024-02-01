@@ -46,7 +46,7 @@ class AddExpenseActivity : AppCompatActivity() {
                 if (amountText.isNotEmpty() && date.isNotEmpty() && mode.isNotEmpty()) {
                     val amount = amountText.toInt()
 
-                    // Determine the selected operation type (Income or Expense)
+                    // Determine the selected operation type (Income or Expense)  TYPE >> incomeExpensetype
                     val incomeExpensetype = if (rbIncome.isChecked) 0 else 1
 
                     // Get the selected category from the spinner

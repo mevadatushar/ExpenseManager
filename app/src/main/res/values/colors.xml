@@ -6,5 +6,8 @@
     <color name="pressed_color_light">#E0E0E0</color> <!-- Light gray -->
     <!-- colors.xml -->
     <color name="pressed_color_dark">#1A000000</color> <!-- Semi-transparent black -->
+    <color name="green">#0F910F</color>
+    <color name="red">#FF0000</color>
+
 
 </resources>

@@ -18,6 +18,6 @@ class MainActivity : AppCompatActivity() {
 
 
             finish()
-        }, 1500)
+        }, 1000)
     }
 }

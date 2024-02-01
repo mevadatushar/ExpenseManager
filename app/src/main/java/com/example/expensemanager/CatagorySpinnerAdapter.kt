@@ -22,8 +22,8 @@ class CatagorySpinnerAdapter(var context: Context, var list: ArrayList<categoryM
 
     override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View {
         var inflater = LayoutInflater.from(context)
-        var itemView = convertView ?: inflater.inflate(android.R.layout.simple_spinner_item, parent, false)
-        var text1: TextView = itemView.findViewById(android.R.id.text1)
+        var itemView = convertView ?: inflater.inflate(R.layout.catagory_item, parent, false)
+        var text1: TextView = itemView.findViewById(R.id.text1)
 
         text1.text = list[position].category
 

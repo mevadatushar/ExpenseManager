@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.expensemanager.AddExpenseActivity
 import com.example.expensemanager.CategoryActivity
+import com.example.expensemanager.ReportActivity
 import com.example.expensemanager.databinding.ActivityDasbhordBinding
 
 class Dasbhord_Activity : AppCompatActivity() {
@@ -42,6 +43,13 @@ class Dasbhord_Activity : AppCompatActivity() {
                 var i = Intent(this@Dasbhord_Activity, CategoryActivity::class.java)
                 startActivity(i)
             }
+
+            binding.llReport.setOnClickListener {
+                var i = Intent(this@Dasbhord_Activity, ReportActivity::class.java)
+                startActivity(i)
+            }
+
+
 
 
         }

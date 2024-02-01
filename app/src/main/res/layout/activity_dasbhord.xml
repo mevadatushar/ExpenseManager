@@ -165,6 +165,7 @@
         app:cardCornerRadius="@dimen/_10sdp">
 
         <LinearLayout
+            android:id="@+id/llReport"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@drawable/toucheffect"

@@ -3,15 +3,16 @@ package com.example.expensemanager
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 
-class ReportsAdapter(var list: ArrayList<addIncomeExpenseModal>) : RecyclerView.Adapter<ReportsAdapter.MyViewHolder>() {
+class ReportsAdapter(var list: ArrayList<addIncomeExpenseModal>, var deleteClick: ((id: Int) -> Unit)) : RecyclerView.Adapter<ReportsAdapter.MyViewHolder>() {
     class MyViewHolder(v: View) : RecyclerView.ViewHolder(v)  {
         var containerLayout: LinearLayout = v.findViewById(R.id.containerLayout)
-
+        var imgDelete: ImageView = v.findViewById(R.id.imgDelete)
         var txtchange: TextView = v.findViewById(R.id.txtchange)
         var txtamount: TextView = v.findViewById(R.id.txtamount)
         var txtdate: TextView = v.findViewById(R.id.txtdate)
@@ -47,10 +48,24 @@ class ReportsAdapter(var list: ArrayList<addIncomeExpenseModal>) : RecyclerView.
            // Display "Income" or "Expense" based on the operationType
            txtchange.text = if (list[position].incomeExpensetype == 0) "Income" else "Expense"
 
+
+           imgDelete.setOnClickListener {
+               deleteClick.invoke(list[position].id)
+           }
+
+
+
        }
     }
 
     override fun getItemCount(): Int {
         return list.size
     }
+
+    fun UpdataData(list: ArrayList<addIncomeExpenseModal>) {
+        this.list = ArrayList()
+        this.list = list
+        notifyDataSetChanged()
+    }
+
 }

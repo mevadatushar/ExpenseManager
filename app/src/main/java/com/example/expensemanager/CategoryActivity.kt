@@ -30,21 +30,20 @@ class CategoryActivity : AppCompatActivity() {
         }
 
 
-      
 
-        with(binding)
-        {
-
+        with(binding) {
             binding.imgAddCategory.setOnClickListener {
-                myDb.InsertRecord(edtCategory.text.toString())
-                Toast.makeText(this@CategoryActivity, "Category added successfully", Toast.LENGTH_SHORT).show();
+                val categoryText = edtCategory.text.toString()
 
-                finish()
-
+                if (categoryText.isNotBlank() && !categoryText.all { it.isWhitespace() }) {
+                    myDb.InsertRecord(categoryText)
+                    Toast.makeText(this@CategoryActivity, "Category added successfully", Toast.LENGTH_SHORT).show()
+                    finish()
+                } else {
+                    Toast.makeText(this@CategoryActivity, "Please enter a valid category", Toast.LENGTH_SHORT).show()
+                }
             }
-
         }
-
 
         myDb = MyDatabaseHelper(this, dbName)
 

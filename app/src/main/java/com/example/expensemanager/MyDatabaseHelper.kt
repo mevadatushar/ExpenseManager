@@ -66,12 +66,43 @@ class MyDatabaseHelper(var context: Context, var dbName: String) : SQLiteOpenHel
         }
         return list
     }
+    fun calculateTotalIncome(): Int {
+        // Replace "your_income_table_name" with the actual name of your income table
+        val query = "SELECT SUM(amount) FROM AddIncome_ExpenseTB WHERE incomeExpensetype = 0" // Assuming incomeExpensetype 0 is for income
+        val cursor = readableDatabase.rawQuery(query, null)
+
+        var totalIncome = 0
+
+        cursor?.use {
+            if (it.moveToFirst()) {
+                totalIncome = it.getInt(0)
+            }
+        }
+
+        return totalIncome
+    }
+
+    fun calculateTotalExpense(): Int {
+        // Replace "your_expense_table_name" with the actual name of your expense table
+        val query = "SELECT SUM(amount) FROM AddIncome_ExpenseTB WHERE incomeExpensetype = 1" // Assuming incomeExpensetype 1 is for expense
+        val cursor = readableDatabase.rawQuery(query, null)
+
+        var totalExpense = 0
+
+        cursor?.use {
+            if (it.moveToFirst()) {
+                totalExpense = it.getInt(0)
+            }
+        }
+
+        return totalExpense
+    }
 
     fun DisplayRecordAddIncoemExpense():ArrayList<addIncomeExpenseModal>
     {
         var list : ArrayList<addIncomeExpenseModal> = ArrayList()
         var db = readableDatabase
-        var sql="select * from AddIncome_ExpenseTB"
+        var sql="SELECT * FROM AddIncome_ExpenseTB ORDER BY date DESC"
         var cursor =db.rawQuery(sql,null)
 
         if(cursor.count  > 0)
@@ -92,6 +123,12 @@ class MyDatabaseHelper(var context: Context, var dbName: String) : SQLiteOpenHel
             }while (cursor.moveToNext())
         }
         return list
+    }
+
+    fun deleteData(id : Int)
+    {
+        var db = writableDatabase
+        db.delete("AddIncome_ExpenseTB","AddIncome_ExpenseID=?", arrayOf(id.toString()))
     }
 
 }

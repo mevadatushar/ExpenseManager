@@ -8,6 +8,10 @@
     <color name="pressed_color_dark">#1A000000</color> <!-- Semi-transparent black -->
     <color name="green">#0F910F</color>
     <color name="red">#FF0000</color>
+    <color name="blue">#0000FF</color>
+
+    <color name="deleteButtonColor">#FF0000</color> <!-- Red -->
+    <color name="cancelButtonColor">#008CBA</color> <!-- Blue -->
 
 
 </resources>

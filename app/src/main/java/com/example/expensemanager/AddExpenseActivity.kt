@@ -7,7 +7,9 @@ import android.util.Log
 import android.widget.TextView
 import android.widget.Toast
 import com.example.expensemanager.databinding.ActivityAddExpenseBinding
+import java.text.SimpleDateFormat
 import java.util.Calendar
+import java.util.Locale
 
 class AddExpenseActivity : AppCompatActivity() {
 
@@ -24,6 +26,10 @@ class AddExpenseActivity : AppCompatActivity() {
     }
 
     private fun initview() {
+
+        val currentDate =
+            SimpleDateFormat("dd-MM-yyyy", Locale.getDefault()).format(Calendar.getInstance().time)
+        binding.txtDate.text = currentDate
 
         // Set a click listener for the back button
         binding.imgBack.setOnClickListener {
@@ -55,25 +61,29 @@ class AddExpenseActivity : AppCompatActivity() {
                     // Check if the selected item is of the expected type (categoryModal)
                     if (selectedCategory is categoryModal) {
                         // Insert the data into the database
-                        myDb.InsertRecordAddIncoemExpense(amount, date, mode, note, selectedCategory.category, incomeExpensetype)
+                        myDb.InsertRecordAddIncoemExpense(
+                            amount, date, mode, note, selectedCategory.category, incomeExpensetype
+                        )
                         Toast.makeText(this@AddExpenseActivity, "Data Submitted Successfully", Toast.LENGTH_SHORT).show()
-                        Log.e("TAG", "initview: "+incomeExpensetype+" " +amount+" "+date+" "+selectedCategory+" "+mode+" "+note)
+                        finish()
+                        Log.e(
+                            "TAG",
+                            "initview: " + incomeExpensetype + " " + amount + " " + date + " " + selectedCategory + " " + mode + " " + note
+                        )
                     } else {
                         // Show a toast for unexpected category selection
-                        Toast.makeText(this@AddExpenseActivity, "Unexpected category selection", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(
+                            this@AddExpenseActivity,
+                            "Unexpected category selection",
+                            Toast.LENGTH_SHORT
+                        ).show()
                     }
                 } else {
                     // Show a toast for incomplete details
-                    Toast.makeText(this@AddExpenseActivity, "Enter all details", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this@AddExpenseActivity, "Enter all details", Toast.LENGTH_SHORT)
+                        .show()
                 }
             }
-
-
-
-
-
-
-
 
 
             val operationType = intent.getStringExtra("operationType")
@@ -98,9 +108,7 @@ class AddExpenseActivity : AppCompatActivity() {
     }
 
 
-
     private fun showDatePickerDialog() {
-        // Use the current date as the default date in the picker
         // Use the current date as the default date in the picker
         val c: Calendar = Calendar.getInstance()
         val year: Int = c.get(Calendar.YEAR)
@@ -109,14 +117,22 @@ class AddExpenseActivity : AppCompatActivity() {
 
         val datePickerDialog = DatePickerDialog(
             this@AddExpenseActivity,
-            { view, year, monthOfYear, dayOfMonth -> // Format the date and set it to the EditText
-                val selectedDate = dayOfMonth.toString() + "/" + (monthOfYear + 1) + "/" + year
+            { _, year, monthOfYear, dayOfMonth -> // Format the date and set it to the EditText
+                val formattedDay = if (dayOfMonth < 10) "0$dayOfMonth" else "$dayOfMonth"
+                val formattedMonth =
+                    if (monthOfYear + 1 < 10) "0${monthOfYear + 1}" else "${monthOfYear + 1}"
+                val selectedDate = "$formattedDay-$formattedMonth-$year"
                 binding.txtDate.setText(selectedDate)
             },
             year,
             month,
             day
         )
+
+        // Set the maximum date to the current date to prevent selecting future dates
+        datePickerDialog.datePicker.maxDate = System.currentTimeMillis()
+
         datePickerDialog.show()
     }
+
 }

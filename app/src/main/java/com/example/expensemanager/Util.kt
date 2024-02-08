@@ -2,7 +2,7 @@ package com.example.expensemanager
 
 import android.content.Intent
 
-var dbName  = "categoryDB"
+var dbName  = "ExpenseManagerDB"
 
 data class categoryModal(var id : Int, var category:String)
 

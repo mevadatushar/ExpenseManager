@@ -18,7 +18,7 @@
             android:layout_height="match_parent"
             android:gravity="center"
             android:fontFamily="@font/cabin_bold"
-            android:text="Expense Manager"
+            android:text="@string/expense_manager"
             android:textColor="@color/white"
             android:textSize="@dimen/_18sdp"
             android:textStyle="bold" />
@@ -53,7 +53,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:padding="@dimen/_5sdp"
-                    android:text="Income"
+                    android:text="@string/income_dashboard"
                     android:fontFamily="@font/amiko_semibold"
                     android:textColor="@color/green"
                     android:textSize="@dimen/_15ssp" />
@@ -82,7 +82,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:padding="@dimen/_5sdp"
-                    android:text="Expense"
+                    android:text="@string/expense_dashboard"
                     android:fontFamily="@font/amiko_semibold"
                     android:textColor="@color/red"
                     android:textSize="@dimen/_15ssp" />
@@ -110,7 +110,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:padding="@dimen/_5sdp"
-                    android:text="Balance"
+                    android:text="@string/balance_dashboard"
                     android:fontFamily="@font/amiko_semibold"
                     android:textColor="@color/blue"
                     android:textSize="@dimen/_15ssp" />
@@ -166,7 +166,7 @@
                 android:layout_gravity="center_vertical"
                 android:fontFamily="@font/cabin_bold"
                 android:paddingLeft="@dimen/_15sdp"
-                android:text="ADD INCOME"
+                android:text="@string/add_income"
                 android:textColor="#19688B"
                 android:textSize="@dimen/_15sdp" />
 
@@ -205,7 +205,7 @@
                 android:layout_gravity="center_vertical"
                 android:fontFamily="@font/cabin_bold"
                 android:paddingLeft="@dimen/_15sdp"
-                android:text="ADD EXPENSES"
+                android:text="@string/add_expenses"
                 android:textColor="#4B81BE"
                 android:textSize="@dimen/_15sdp" />
 
@@ -245,7 +245,7 @@
                 android:layout_gravity="center_vertical"
                 android:fontFamily="@font/cabin_bold"
                 android:paddingLeft="@dimen/_15sdp"
-                android:text="REPORTS"
+                android:text="@string/reports"
                 android:textColor="#FF7175"
                 android:textSize="@dimen/_15sdp" />
 
@@ -288,13 +288,81 @@
             android:layout_gravity="center_vertical"
             android:fontFamily="@font/cabin_bold"
             android:paddingLeft="@dimen/_15sdp"
-            android:text="CATEGORY"
+            android:text="@string/category_dashboard"
             android:textColor="#00B300"
             android:textSize="@dimen/_15sdp" />
 
     </LinearLayout>
 </LinearLayout>
+
+
+
+
     </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_55sdp"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:layout_marginVertical="@dimen/_5sdp"
+        app:cardCornerRadius="@dimen/_10sdp">
+        <LinearLayout
+            android:background="#45229FD7"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:id="@+id/llSettings"
+                android:background="@drawable/toucheffect"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clickable="true"
+                android:focusable="true">
+
+                <ImageView
+                    android:layout_width="@dimen/_40sdp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/_15sdp"
+                    android:src="@drawable/settings" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:fontFamily="@font/cabin_bold"
+                    android:paddingLeft="@dimen/_15sdp"
+                    android:text="@string/settings"
+                    android:textColor="#19688B"
+                    android:textSize="@dimen/_15sdp" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+
+
+    </androidx.cardview.widget.CardView>
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginVertical="@dimen/_10sdp"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="bottom"
+        app:adSize="BANNER"
+        app:adUnitId="ca-app-pub-3940256099942544/6300978111" />
+
+
+</LinearLayout>
 
 
 </LinearLayout>

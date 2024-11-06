@@ -14,6 +14,8 @@ class ReportActivity : AppCompatActivity() {
     private lateinit var binding: ActivityReportBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        // Apply saved language
+        LanguageUtil.applyLanguage(this, LanguageUtil.getSavedLanguage(this))
         binding = ActivityReportBinding.inflate(layoutInflater)
         setContentView(binding.root)
         initview()

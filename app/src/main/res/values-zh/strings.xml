@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">费用管理器</string>
+    <string name="title_activity_dashbord">仪表板_活动</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">第一个片段</string>
+    <string name="second_fragment_label">第二个片段</string>
+    <string name="next">下一个</string>
+    <string name="previous">上一个</string>
+
+    <string name="title_activity_add_income">添加收入</string>
+    <string name="addfieldname">添加字段名</string>
+    <string name="AddIncome">添加收入</string>
+    <string name="AddExpense">添加支出</string>
+    <string name="type">类型</string>
+    <string name="income">收入</string>
+    <string name="expense">支出</string>
+    <string name="amount">金额</string>
+    <string name="amount_hint">金额</string>
+    <string name="date">日期</string>
+    <string name="pick_your_date">选择日期</string>
+    <string name="category">类别</string>
+    <string name="mode">模式</string>
+    <string name="mode_of_payment">支付方式</string>
+    <string name="note">备注</string>
+    <string name="note_hint">备注</string>
+    <string name="add_category">添加类别</string>
+    <string name="enter_your_category">输入您的类别</string>
+    <string name="category_hint">类别</string>
+    <string name="expense_manager">费用管理器</string>
+    <string name="income_dashboard">收入</string>
+    <string name="expense_dashboard">支出</string>
+    <string name="balance_dashboard">余额</string>
+    <string name="add_income">添加收入</string>
+    <string name="add_expenses">添加支出</string>
+    <string name="reports">报告</string>
+    <string name="category_dashboard">类别</string>
+    <string name="report_s">报告</string>
+    <string name="are_you_sure_you_want_to_delete_this_record">您确定要删除此记录吗？</string>
+    <string name="cancel">取消</string>
+    <string name="delete">删除</string>
+    <string name="type_report">类型</string>
+    <string name="amount_report">金额:</string>
+    <string name="date_report">日期:</string>
+    <string name="category_report">类别:</string>
+    <string name="mode_report">模式:</string>
+    <string name="note_report">备注:</string>
+    <string name="settings">设置</string>
+    <string name="change_language">更改语言</string>
+    <string name="english">English</string>
+    <string name="hindi">हिंदी</string>
+    <string name="gujarati">ગુજરાતી</string>
+    <string name="chinese">中文</string>
+</resources>

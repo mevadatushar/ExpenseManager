@@ -1,0 +1,53 @@
+<resources>
+    <string name="app_name">व्यय प्रबंधक</string>
+    <string name="title_activity_dashbord">डैशबोर्ड_ऐक्ट</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">प्रथम खंड</string>
+    <string name="second_fragment_label">दूसरा खंड</string>
+    <string name="next">आगे</string>
+    <string name="previous">पिछला</string>
+
+    <string name="title_activity_add_income">आय जोड़ें</string>
+    <string name="addfieldname">फ़ील्ड का नाम जोड़ें</string>
+    <string name="AddIncome">आय जोड़ें</string>
+    <string name="AddExpense">व्यय जोड़ें</string>
+    <string name="type">प्रकार</string>
+    <string name="income">आय</string>
+    <string name="expense">व्यय</string>
+    <string name="amount">राशि</string>
+    <string name="amount_hint">राशि</string>
+    <string name="date">तारीख</string>
+    <string name="pick_your_date">अपनी तारीख चुनें</string>
+    <string name="category">श्रेणी</string>
+    <string name="mode">मोड</string>
+    <string name="mode_of_payment">भुगतान का तरीका</string>
+    <string name="note">नोट</string>
+    <string name="note_hint">नोट</string>
+    <string name="add_category">श्रेणी जोड़ें</string>
+    <string name="enter_your_category">अपनी श्रेणी दर्ज करें</string>
+    <string name="category_hint">श्रेणी</string>
+    <string name="expense_manager">व्यय प्रबंधक</string>
+    <string name="income_dashboard">आय</string>
+    <string name="expense_dashboard">व्यय</string>
+    <string name="balance_dashboard">शेष राशि</string>
+    <string name="add_income">आय जोड़ें</string>
+    <string name="add_expenses">व्यय जोड़ें</string>
+    <string name="reports">रिपोर्टें</string>
+    <string name="category_dashboard">श्रेणी</string>
+    <string name="report_s">रिपोर्ट्स</string>
+    <string name="are_you_sure_you_want_to_delete_this_record">क्या आप सुनिश्चित हैं कि आप इस रिकॉर्ड को हटाना चाहते हैं?</string>
+    <string name="cancel">रद्द करें</string>
+    <string name="delete">हटाएं</string>
+    <string name="type_report">प्रकार</string>
+    <string name="amount_report">राशि:</string>
+    <string name="date_report">तारीख:</string>
+    <string name="category_report">श्रेणी:</string>
+    <string name="mode_report">मोड:</string>
+    <string name="note_report">नोट:</string>
+    <string name="settings">सेटिंग</string>
+    <string name="change_language">भाषा बदलें</string>
+    <string name="english">English</string>
+    <string name="hindi">हिंदी</string>
+    <string name="gujarati">ગુજરાતી</string>
+    <string name="chinese">中文</string>
+</resources>

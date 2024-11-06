@@ -23,7 +23,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="Type"
+            android:text="@string/type_report"
             android:padding="@dimen/_10sdp"
             android:textColor="@color/white"
             android:textSize="@dimen/_15ssp"
@@ -47,7 +47,7 @@
                     android:fontFamily="@font/cabin_bold"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Amount :-"
+                    android:text="@string/amount_report"
                     android:textSize="@dimen/_13ssp" />
 
                 <TextView
@@ -82,7 +82,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:padding="@dimen/_2sdp"
-                        android:text="Date  :-"
+                        android:text="@string/date_report"
                         android:textSize="@dimen/_13ssp"
                         />
                     <TextView
@@ -110,7 +110,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="@dimen/_2sdp"
-                    android:text="Category :-"
+                    android:text="@string/category_report"
                     android:textSize="@dimen/_13ssp"
                    />
 
@@ -139,7 +139,7 @@
                     android:fontFamily="@font/cabin_bold"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Mode :-"
+                    android:text="@string/mode_report"
                     android:textSize="@dimen/_13ssp"
                     />
 
@@ -166,7 +166,7 @@
                     android:fontFamily="@font/cabin_bold"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Note :-"
+                    android:text="@string/note_report"
                     android:textSize="@dimen/_13ssp"
                   />
 

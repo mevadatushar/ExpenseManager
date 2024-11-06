@@ -11,11 +11,18 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.expensemanager.AddExpenseActivity
 import com.example.expensemanager.CategoryActivity
+import com.example.expensemanager.LanguageUtil
 import com.example.expensemanager.MyDatabaseHelper
 import com.example.expensemanager.ReportActivity
+import com.example.expensemanager.SettingActivity
 import com.example.expensemanager.databinding.ActivityDasbhordBinding
 import com.example.expensemanager.dbName
 import com.example.expensemanager.notifications.AlarmReceiver
+import com.google.android.gms.ads.AdRequest
+import com.google.android.gms.ads.MobileAds
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 import java.util.Calendar
 
 
@@ -31,12 +38,29 @@ class DasbhordActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        // Apply saved language
+        LanguageUtil.applyLanguage(this, LanguageUtil.getSavedLanguage(this))
         binding = ActivityDasbhordBinding.inflate(layoutInflater)
         setContentView(binding.root)
         myDb = MyDatabaseHelper(this@DasbhordActivity, dbName)
         initview()
         ScheduleAlarm()
+        adMob()
 
+    }
+
+    private fun adMob() {
+        val backgroundScope = CoroutineScope(Dispatchers.IO)
+        backgroundScope.launch {
+            // Initialize the Google Mobile Ads SDK on a background thread.
+            MobileAds.initialize(this@DasbhordActivity) {}
+        }
+
+        // Create an ad request.
+        val adRequest = AdRequest.Builder().build()
+
+        // Start loading the ad in the background.
+        binding.adView.loadAd(adRequest)
     }
 
     private fun ScheduleAlarm() {
@@ -91,6 +115,12 @@ class DasbhordActivity : AppCompatActivity() {
             llReport.setOnClickListener {
                 val i = Intent(this@DasbhordActivity, ReportActivity::class.java)
                 startActivityForResult(i, REPORT_REQUEST_CODE)
+            }
+
+            llSettings.setOnClickListener {
+                val i = Intent(this@DasbhordActivity, SettingActivity::class.java)
+                startActivity(i)
+
             }
         }
     }

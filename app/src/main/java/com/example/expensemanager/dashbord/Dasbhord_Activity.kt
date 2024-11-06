@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.expensemanager.AddExpenseActivity
 import com.example.expensemanager.CategoryActivity
+import com.example.expensemanager.LanguageUtil
 import com.example.expensemanager.MyDatabaseHelper
 import com.example.expensemanager.ReportActivity
 import com.example.expensemanager.databinding.ActivityDasbhordBinding
@@ -22,6 +23,8 @@ class Dasbhord_Activity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        // Apply saved language
+        LanguageUtil.applyLanguage(this, LanguageUtil.getSavedLanguage(this))
         binding = ActivityDasbhordBinding.inflate(layoutInflater)
         setContentView(binding.root)
         myDb = MyDatabaseHelper(this@Dasbhord_Activity, dbName)

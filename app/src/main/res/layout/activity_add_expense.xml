@@ -33,7 +33,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/_10sdp"
             android:fontFamily="@font/cabin_bold"
-           android:hint="AddFieldName"
+           android:hint="@string/addfieldname"
             android:textColor="@color/white"
             android:textSize="@dimen/_20sdp"
             android:textStyle="bold" />
@@ -88,7 +88,7 @@
                         android:layout_marginHorizontal="@dimen/_10sdp"
                         android:layout_marginVertical="@dimen/_5sdp"
                         android:fontFamily="@font/cabin_semibold"
-                        android:text="Type"
+                        android:text="@string/type"
                         android:textColor="#055f97"
                         android:textSize="@dimen/_15ssp"
                         android:textStyle="bold" />
@@ -110,7 +110,7 @@
                             android:buttonTint="#19688b"
 
                             android:fontFamily="@font/cabin_semibold"
-                            android:text="Income"
+                            android:text="@string/income"
                             android:textSize="@dimen/_15ssp" />
 
                         <RadioButton
@@ -121,7 +121,7 @@
                             android:buttonTint="#19688b"
                             android:checked="true"
                             android:fontFamily="@font/cabin_semibold"
-                            android:text="Expense"
+                            android:text="@string/expense"
                             android:textSize="@dimen/_15ssp" />
                     </RadioGroup>
                 </LinearLayout>
@@ -146,7 +146,7 @@
                         android:layout_marginHorizontal="@dimen/_10sdp"
                         android:layout_marginVertical="@dimen/_5sdp"
                         android:fontFamily="@font/cabin_semibold"
-                        android:text="Amount"
+                        android:text="@string/amount"
                         android:textColor="#055f97"
                         android:textSize="@dimen/_15ssp"
                         android:textStyle="bold" />
@@ -158,7 +158,7 @@
                         android:layout_marginHorizontal="@dimen/_10sdp"
                         android:layout_marginBottom="@dimen/_2sdp"
                         android:fontFamily="@font/cabin_semibold"
-                        android:hint="Amount"
+                        android:hint="@string/amount_hint"
                         android:inputType="number"
                         android:maxLength="15"
                         android:textColor="@color/black"
@@ -185,7 +185,7 @@
                         android:layout_marginHorizontal="@dimen/_10sdp"
                         android:layout_marginVertical="@dimen/_5sdp"
                         android:fontFamily="@font/cabin_semibold"
-                        android:text="Date"
+                        android:text="@string/date"
                         android:textColor="#055f97"
                         android:textSize="@dimen/_15ssp"
                         android:textStyle="bold" />
@@ -200,7 +200,7 @@
                         android:cursorVisible="false"
                         android:focusable="false"
                         android:fontFamily="@font/cabin_semibold"
-                        android:hint="Pick Your Date"
+                        android:hint="@string/pick_your_date"
                         android:inputType="date"
                         android:textSize="@dimen/_13ssp" />
 
@@ -226,7 +226,7 @@
                         android:layout_marginHorizontal="@dimen/_10sdp"
                         android:layout_marginVertical="@dimen/_5sdp"
                         android:fontFamily="@font/cabin_semibold"
-                        android:text="Category"
+                        android:text="@string/category"
                         android:textColor="#055f97"
                         android:textSize="@dimen/_15ssp"
                         android:textStyle="bold" />
@@ -263,7 +263,7 @@
                         android:layout_marginHorizontal="@dimen/_10sdp"
                         android:layout_marginVertical="@dimen/_5sdp"
                         android:fontFamily="@font/cabin_semibold"
-                        android:text="Mode"
+                        android:text="@string/mode"
                         android:textColor="#055f97"
                         android:textSize="@dimen/_15ssp"
                         android:textStyle="bold" />
@@ -275,7 +275,7 @@
                         android:layout_marginHorizontal="@dimen/_10sdp"
                         android:layout_marginBottom="@dimen/_10sdp"
                         android:fontFamily="@font/cabin_semibold"
-                        android:hint="Mode Of Payment"
+                        android:hint="@string/mode_of_payment"
                         android:maxLength="8"
                         android:textSize="@dimen/_15ssp" />
 
@@ -301,7 +301,7 @@
                         android:layout_marginHorizontal="@dimen/_10sdp"
                         android:layout_marginVertical="@dimen/_5sdp"
                         android:fontFamily="@font/cabin_semibold"
-                        android:text="Note"
+                        android:text="@string/note"
                         android:textColor="#055f97"
                         android:textSize="@dimen/_15ssp"
                         android:textStyle="bold" />
@@ -313,7 +313,7 @@
                         android:layout_marginHorizontal="@dimen/_10sdp"
                         android:layout_marginBottom="@dimen/_2sdp"
                         android:fontFamily="@font/cabin_semibold"
-                        android:hint="Note"
+                        android:hint="@string/note_hint"
                         android:textColor="@color/black"
                         android:textSize="@dimen/_13ssp" />
                 </LinearLayout>

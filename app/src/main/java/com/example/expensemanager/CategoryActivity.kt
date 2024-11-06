@@ -15,6 +15,8 @@ class CategoryActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        // Apply saved language
+        LanguageUtil.applyLanguage(this, LanguageUtil.getSavedLanguage(this))
         binding = ActivityCategoryBinding.inflate(layoutInflater)
         setContentView(binding.root)
 

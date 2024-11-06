@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ખર્ચ મેનેજર</string>
+    <string name="title_activity_dashbord">ડેશબોર્ડ_ક્રીયા</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">પ્રથમ ભાગ</string>
+    <string name="second_fragment_label">બીજો ભાગ</string>
+    <string name="next">આગળ</string>
+    <string name="previous">પાછળ</string>
+
+    <string name="title_activity_add_income">આવક ઉમેરો</string>
+    <string name="addfieldname">ક્ષેત્રનું નામ ઉમેરો</string>
+    <string name="AddIncome">આવક ઉમેરો</string>
+    <string name="AddExpense">ખર્ચ ઉમેરો</string>
+    <string name="type">પ્રકાર</string>
+    <string name="income">આવક</string>
+    <string name="expense">ખર્ચ</string>
+    <string name="amount">રકમ</string>
+    <string name="amount_hint">રકમ</string>
+    <string name="date">તારીખ</string>
+    <string name="pick_your_date">તમારી તારીખ પસંદ કરો</string>
+    <string name="category">વર્ગ</string>
+    <string name="mode">પ્રકાર</string>
+    <string name="mode_of_payment">ચુકવણીનો પ્રકાર</string>
+    <string name="note">નોંધ</string>
+    <string name="note_hint">નોંધ</string>
+    <string name="add_category">વર્ગ ઉમેરો</string>
+    <string name="enter_your_category">તમારો વર્ગ દાખલ કરો</string>
+    <string name="category_hint">વર્ગ</string>
+    <string name="expense_manager">ખર્ચ મેનેજર</string>
+    <string name="income_dashboard">આવક</string>
+    <string name="expense_dashboard">ખર્ચ</string>
+    <string name="balance_dashboard">બેલેન્સ</string>
+    <string name="add_income">આવક ઉમેરો</string>
+    <string name="add_expenses">ખર્ચ ઉમેરો</string>
+    <string name="reports">અહેવાલ</string>
+    <string name="category_dashboard">વર્ગ</string>
+    <string name="report_s">અહેવાલ</string>
+    <string name="are_you_sure_you_want_to_delete_this_record">શું તમે ખરેખર આ રેકોર્ડને કાઢી નાખવા માંગો છો?</string>
+    <string name="cancel">રદ કરો</string>
+    <string name="delete">કાઢી નાખો</string>
+    <string name="type_report">પ્રકાર</string>
+    <string name="amount_report">રકમ:</string>
+    <string name="date_report">તારીખ:</string>
+    <string name="category_report">વર્ગ:</string>
+    <string name="mode_report">પ્રકાર:</string>
+    <string name="note_report">નોંધ:</string>
+    <string name="settings">સેટિંગ</string>
+    <string name="change_language">ભાષા બદલો</string>
+    <string name="english">English</string>
+    <string name="hindi">हिंदी</string>
+    <string name="gujarati">ગુજરાતી</string>
+    <string name="chinese">中文</string>
+</resources>

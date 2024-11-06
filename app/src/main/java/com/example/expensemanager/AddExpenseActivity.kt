@@ -18,8 +18,12 @@ class AddExpenseActivity : AppCompatActivity() {
     lateinit var txtDate: TextView
     private lateinit var binding: ActivityAddExpenseBinding
 
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        // Apply saved language
+        LanguageUtil.applyLanguage(this, LanguageUtil.getSavedLanguage(this))
         binding = ActivityAddExpenseBinding.inflate(layoutInflater)
         setContentView(binding.root)
         initview()
@@ -91,10 +95,10 @@ class AddExpenseActivity : AppCompatActivity() {
             // Select the appropriate radio button based on the operationType
             if (operationType == "Expense") {
                 rbExpense.isChecked = true
-                binding.txtNameField.text = "Add Expense"
+                binding.txtNameField.text = getString(R.string.AddExpense)
             } else if (operationType == "Income") {
                 rbIncome.isChecked = true
-                binding.txtNameField.text = "Add Income"
+                binding.txtNameField.text = getString(R.string.AddIncome)
             }
 //object of MyDatabaseHelper
             myDb = MyDatabaseHelper(this@AddExpenseActivity, dbName)
